@@ -419,6 +419,32 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
+			case 'stage2':
+				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+				add(bg);
+
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				add(stageFront);
+
+				if(!ClientPrefs.lowQuality) {
+					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
+					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+					stageLight.updateHitbox();
+					add(stageLight);
+					var stageLight:BGSprite = new BGSprite('stage_light', 1225, -100, 0.9, 0.9);
+					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+					stageLight.updateHitbox();
+					stageLight.flipX = true;
+					add(stageLight);
+
+					var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+					stageCurtains.updateHitbox();
+					add(stageCurtains);
+				}
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -4116,6 +4142,30 @@ class PlayState extends MusicBeatState
 				{
 					case 240:
 						defaultCamZoom -= 0.2;
+				}
+			}
+		if (curSong == 'Sunny Day')
+			{
+				switch (curBeat)
+				{
+					case 46, 134:
+						defaultCamZoom += 0.3;
+
+					case 48:
+						defaultCamZoom -= 0.3;
+
+					case 84:
+						defaultCamZoom += 0.5;
+					
+					case 86:
+						defaultCamZoom -= 0.7;
+					
+					case 88:
+						defaultCamZoom += 0.2;
+
+					case 136:
+						defaultCamZoom -= 0.5;
+
 				}
 			}
 

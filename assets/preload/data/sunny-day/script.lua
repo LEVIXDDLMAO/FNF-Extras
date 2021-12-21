@@ -1,19 +1,12 @@
-local xx = 500;
-local yy = 500;
+local xx = 475;
+local yy = 475;
 local xx2 = 800;
 local yy2 = 500;
-local ofs = 35;
+local ofs = 50;
 local ofs2 = 35;
 local followchars = true;
 local del = 0;
 local del2 = 0;
-
-function opponentNoteHit()
-    health = getProperty('health')
-        if getProperty('health') > 0.02 then
-        setProperty('health', health- 0.02);
-    end
-end
 
 function onUpdate()
 	if del > 0 then
