@@ -1,0 +1,25 @@
+{
+	"storyName": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Diplopia",
+			"bf",
+			[
+				0,
+				140,
+				237
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "BF vs. BF"
+}
