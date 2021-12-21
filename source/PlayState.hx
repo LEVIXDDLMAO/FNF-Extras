@@ -4110,6 +4110,15 @@ class PlayState extends MusicBeatState
 	{
 		super.beatHit();
 
+		if (curSong == 'Diplopia')
+			{
+				switch (curBeat)
+				{
+					case 240:
+						defaultCamZoom -= 0.2;
+				}
+			}
+
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
 			return;
