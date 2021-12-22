@@ -599,6 +599,32 @@ class PlayState extends MusicBeatState
 				halloweenBG = new BGSprite('holiday', -200, -100);
 				add(halloweenBG);
 
+			 case 'no-villains':
+					defaultCamZoom = 1;
+					curStage = 'stage3';
+					var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback3'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
+
+					var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront3'));
+					stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+					stageFront.updateHitbox();
+					stageFront.antialiasing = true;
+					stageFront.scrollFactor.set(0.9, 0.9);
+					stageFront.active = false;
+					add(stageFront);
+
+					var stageCurtains:FlxSprite = new FlxSprite(-450, -150).loadGraphic(Paths.image('stagecurtains3'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.87));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1.1, 1.1);
+					stageCurtains.active = false;
+
+					add(stageCurtains);
+
 			case 'school': //Week 6 - Senpai, Roses
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx-pixel';
 				GameOverSubstate.loopSoundName = 'gameOver-pixel';
@@ -4170,6 +4196,30 @@ class PlayState extends MusicBeatState
 					case 136:
 						defaultCamZoom -= 0.5;
 
+				}
+			}
+		if (curSong == 'No Villains')
+			{
+				switch (curBeat)
+				{
+					case 211, 288, 416:
+						remove(dad);
+						dad = new Character(0, 50, 'sonic-mad');
+						add(dad);
+
+					case 219:
+						remove(dad);
+						dad = new Character(0, 50, 'sonic');
+						add(dad);
+					case 352:
+						remove(dad);
+						dad = new Character(0, 50, 'sonic-forced');
+						add(dad);
+
+					case 417:
+						defaultCamZoom += 0.3;
+
+				
 				}
 			}
 

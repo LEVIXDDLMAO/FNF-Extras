@@ -36,6 +36,15 @@
 				40,
 				133
 			]
+		],
+		[
+			"No Villains",
+			"sonic",
+			[
+				0,
+				100,
+				255
+			]
 		]
 	],
 	"hideStoryMode": false,
