@@ -72,8 +72,8 @@ end
 function opponentNoteHit()
     if dadName == 'sonic-mad2' then
         health = getProperty('health')
-         if getProperty('health') > 0.03 then
-            setProperty('health', health- 0.03);
+         if getProperty('health') > 0.035 then
+            setProperty('health', health- 0.035);
         end
     end
 end
