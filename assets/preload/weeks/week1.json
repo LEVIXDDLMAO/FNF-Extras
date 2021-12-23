@@ -1,5 +1,6 @@
 {
 	"storyName": "",
+	"difficulties": "OG",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
@@ -11,39 +12,12 @@
 	],
 	"songs": [
 		[
-			"Diplopia",
-			"bf",
-			[
-				0,
-				140,
-				237
-			]
-		],
-		[
-			"Holiday Classic",
+			"Sunny Day",
 			"gf",
 			[
 				215,
 				40,
 				133
-			]
-		],
-		[
-			"No Villains",
-			"sonic",
-			[
-				0,
-				100,
-				255
-			]
-		],
-		[
-			"Furiosity",
-			"dave",
-			[
-				195,
-				138,
-				161
 			]
 		]
 	],
