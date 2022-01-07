@@ -3077,7 +3077,7 @@ class PlayState extends MusicBeatState
 			camFollow.x -= boyfriend.cameraPosition[0];
 			camFollow.y += boyfriend.cameraPosition[1];
 
-			if (Paths.formatToSongPath(SONG.song) == 'holiday-classic' && cameraTwn == null && FlxG.camera.zoom != 1)
+			if (Paths.formatToSongPath(SONG.song) == '' && cameraTwn == null && FlxG.camera.zoom != 1)
 			{
 				cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut, onComplete:
 					function (twn:FlxTween)
@@ -3090,7 +3090,7 @@ class PlayState extends MusicBeatState
 	}
 
 	function tweenCamIn() {
-		if (Paths.formatToSongPath(SONG.song) == 'holiday-classic' && cameraTwn == null && FlxG.camera.zoom != 1.3) {
+		if (Paths.formatToSongPath(SONG.song) == '' && cameraTwn == null && FlxG.camera.zoom != 1.3) {
 			cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1.3}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut, onComplete:
 				function (twn:FlxTween) {
 					cameraTwn = null;
@@ -3785,10 +3785,7 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-		if (Paths.formatToSongPath(SONG.song) != 'holiday-classic')
-			camZooming = true;
-
-		if (Paths.formatToSongPath(SONG.song) != 'furiosity')
+		if (Paths.formatToSongPath(SONG.song) != '')
 			camZooming = true;
 
 
@@ -4220,30 +4217,25 @@ class PlayState extends MusicBeatState
 
 				}
 			}
-		if (curSong == 'No Villains')
+		if (curSong == 'Dadbattle')
 			{
 				switch (curBeat)
 				{
-					case 211, 288, 416:
-						remove(dad);
-						dad = new Character(0, 50, 'sonic-mad');
-						add(dad);
-
-					case 219:
-						remove(dad);
-						dad = new Character(0, 50, 'sonic');
-						add(dad);
-					case 352:
-						remove(dad);
-						dad = new Character(0, 50, 'sonic-forced');
-						add(dad);
-
-					case 417:
+					case 64:
 						defaultCamZoom += 0.3;
 
-				
+					case 128:
+						defaultCamZoom -= 0.2;
+
+					case 192, 256:
+						defaultCamZoom -= 0.1;
+
+					case 320:
+						defaultCamZoom += 0.2;
+
 				}
 			}
+		
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);

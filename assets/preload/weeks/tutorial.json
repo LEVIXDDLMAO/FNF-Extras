@@ -1,9 +1,11 @@
 {
 	"storyName": "",
+	"difficulties": "OG, Rechart",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
 		"",
 		"bf",
@@ -38,15 +40,6 @@
 			]
 		],
 		[
-			"Furiosity",
-			"dave",
-			[
-				195,
-				138,
-				161
-			]
-		],
-		[
 			"Ugh",
 			"tankman",
 			[
@@ -56,6 +49,5 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
 	"weekName": "ggggguh"
 }

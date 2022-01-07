@@ -5,6 +5,11 @@
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
 			"Sunny Day",
@@ -17,10 +22,5 @@
 		]
 	],
 	"hideStoryMode": false,
-	"weekCharacters": [
-		"",
-		"bf",
-		"gf"
-	],
 	"weekName": "ggggguh"
 }
