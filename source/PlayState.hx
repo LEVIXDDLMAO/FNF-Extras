@@ -4163,6 +4163,25 @@ class PlayState extends MusicBeatState
 	override function stepHit()
 	{
 		super.stepHit();
+
+		if (curSong == 'Shredder') 
+			{
+				switch (curStep)
+				{
+
+					case 391, 408:
+						defaultCamZoom += 0.4;
+
+					case 454, 472:
+						defaultCamZoom += 0.4;
+
+					case 400, 416:
+						defaultCamZoom -= 0.4;
+
+					case 464, 480:
+						defaultCamZoom -= 0.4;
+				}
+			}
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)
 		{
 			resyncVocals();
@@ -4235,7 +4254,6 @@ class PlayState extends MusicBeatState
 
 				}
 			}
-		
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);

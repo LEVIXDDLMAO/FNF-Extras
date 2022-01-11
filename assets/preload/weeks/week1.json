@@ -5,6 +5,7 @@
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
 		"",
 		"bf",
@@ -19,8 +20,16 @@
 				40,
 				133
 			]
+		],
+		[
+			"Shredder",
+			"bambi",
+			[
+				26,
+				255,
+				73
+			]
 		]
 	],
-	"hideStoryMode": false,
 	"weekName": "ggggguh"
 }
